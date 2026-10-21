@@ -1,0 +1,31 @@
+﻿# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Model checkpoints and weights
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Large datasets
+dataset.zip
+*.h5
+*.hdf5
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local backup files
+*.bak
