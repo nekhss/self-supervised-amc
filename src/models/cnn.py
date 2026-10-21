@@ -50,25 +50,30 @@ class IQCNNClassifier(nn.Module):
         num_classes: int = 24,
         feature_dim: int = 128,
         patch_size: int = 64,
+        signal_length: int = 1024,
     ):
         super().__init__()
 
-        if patch_size < 16 or 1024 % patch_size != 0:
-            raise ValueError("patch_size must be >= 16 and divide 1024.")
+        # signal_length defaults to RadioML 2018 (1024); RadioML 2016 uses 128.
+        if patch_size < 16 or signal_length % patch_size != 0:
+            raise ValueError(
+                f"patch_size must be >= 16 and divide {signal_length}."
+            )
 
         self.patch_size = patch_size
+        self.signal_length = signal_length
         self.encoder = IQCNNEncoder(feature_dim=feature_dim)
         self.classifier = nn.Linear(feature_dim, num_classes)
 
     def encode_signal(self, signals: torch.Tensor) -> torch.Tensor:
-        if signals.ndim != 3 or signals.shape[1:] != (2, 1024):
+        if signals.ndim != 3 or signals.shape[1:] != (2, self.signal_length):
             raise ValueError(
-                f"Expected signals shaped [B, 2, 1024], "
+                f"Expected signals shaped [B, 2, {self.signal_length}], "
                 f"got {tuple(signals.shape)}"
             )
 
         batch_size = signals.shape[0]
-        num_patches = 1024 // self.patch_size
+        num_patches = self.signal_length // self.patch_size
 
         patches = signals.reshape(
             batch_size, 2, num_patches, self.patch_size
