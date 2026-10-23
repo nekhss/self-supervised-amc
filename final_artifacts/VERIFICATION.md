@@ -1,0 +1,63 @@
+# Verification of final figures and tables
+
+All checks passed: **True** (57 checks; values re-read from the raw result files).
+
+- PASS: 22 primary result files
+- PASS: primary scratch_1pct_seed42_v1.json values
+- PASS: primary mae_1pct_seed42_v1.json values
+- PASS: primary scratch_1pct_seed43_v1.json values
+- PASS: primary mae_1pct_seed43_v1.json values
+- PASS: primary scratch_1pct_seed44_v1.json values
+- PASS: primary mae_1pct_seed44_v1.json values
+- PASS: primary scratch_5pct_seed42_v1.json values
+- PASS: primary mae_5pct_seed42_v1.json values
+- PASS: primary scratch_5pct_seed43_v1.json values
+- PASS: primary mae_5pct_seed43_v1.json values
+- PASS: primary scratch_5pct_seed44_v1.json values
+- PASS: primary mae_5pct_seed44_v1.json values
+- PASS: primary scratch_10pct_seed42_v1.json values
+- PASS: primary mae_10pct_seed42_v1.json values
+- PASS: primary scratch_10pct_seed43_v1.json values
+- PASS: primary mae_10pct_seed43_v1.json values
+- PASS: primary scratch_10pct_seed44_v1.json values
+- PASS: primary mae_10pct_seed44_v1.json values
+- PASS: primary scratch_25pct_seed42_v1.json values
+- PASS: primary mae_25pct_seed42_v1.json values
+- PASS: primary scratch_100pct_seed42_v1.json values
+- PASS: primary mae_100pct_seed42_v1.json values
+- PASS: primary budget means equal the reference values (4 d.p.)
+- PASS: paired_comparison delta 1% seed 42 equals result files (CSV is rounded to 4 d.p.)
+- PASS: paired_comparison delta 1% seed 43 equals result files (CSV is rounded to 4 d.p.)
+- PASS: paired_comparison delta 1% seed 44 equals result files (CSV is rounded to 4 d.p.)
+- PASS: paired_comparison delta 5% seed 42 equals result files (CSV is rounded to 4 d.p.)
+- PASS: paired_comparison delta 5% seed 43 equals result files (CSV is rounded to 4 d.p.)
+- PASS: paired_comparison delta 5% seed 44 equals result files (CSV is rounded to 4 d.p.)
+- PASS: paired_comparison delta 10% seed 42 equals result files (CSV is rounded to 4 d.p.)
+- PASS: paired_comparison delta 10% seed 43 equals result files (CSV is rounded to 4 d.p.)
+- PASS: paired_comparison delta 10% seed 44 equals result files (CSV is rounded to 4 d.p.)
+- PASS: paired_comparison delta 25% seed 42 equals result files (CSV is rounded to 4 d.p.)
+- PASS: paired_comparison delta 100% seed 42 equals result files (CSV is rounded to 4 d.p.)
+- PASS: 5% paired p = 0.29
+- PASS: per-SNR value re-read from JSON
+- PASS: scratch 5% confusion matrix sums to the test size
+- PASS: mae 5% confusion matrix sums to the test size
+- PASS: 50-epoch study: 6 verified runs, no problems
+- PASS: 50-epoch study matches its recorded cross-check values
+- PASS: 50 ep mae seed 42 values
+- PASS: 50 ep scratch seed 42 values
+- PASS: 50 ep mae seed 43 values
+- PASS: 50 ep scratch seed 43 values
+- PASS: 50 ep mae seed 44 values
+- PASS: 50 ep scratch seed 44 values
+- PASS: 100-epoch study: 6 verified runs, no problems
+- PASS: 100-epoch study matches its recorded cross-check values
+- PASS: 100 ep mae seed 42 values
+- PASS: 100 ep scratch seed 42 values
+- PASS: 100 ep mae seed 43 values
+- PASS: 100 ep scratch seed 43 values
+- PASS: 100 ep mae seed 44 values
+- PASS: 100 ep scratch seed 44 values
+- PASS: 100-epoch summary equals analysis/summary.json
+- PASS: stage table has 18 rows (2 arms × 3 seeds × 3 stages)
+
+Exploratory studies (50 and 100 epochs) were designed after the primary test results were known; they are shown separately and never pooled with the primary grid. Three seeds do not support claims of statistical significance.

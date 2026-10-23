@@ -1,0 +1,3 @@
+# Only extra dependency for the demo (Altair and pandas come with it).
+# Everything else (torch 2.10.0+cu126, numpy, h5py) is already in C:\venvs\dlproj.
+streamlit>=1.39
